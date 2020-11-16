@@ -1,0 +1,5 @@
+<nav mat-tab-nav-bar style="margin-bottom: 2em;">
+    <a mat-tab-link [routerLink]="[ '/', 'home', { outlets: { homeOutlet: 'exams' } } ]" (click)="selectedTab = 'exams'" [active]="selectedTab == 'exams'">Exams</a>
+    <a mat-tab-link [routerLink]="[ '/', 'home', { outlets: { homeOutlet: 'history' } } ]" (click)="selectedTab = 'history'" [active]="selectedTab == 'history'">History</a>
+</nav>
+<router-outlet name="homeOutlet"></router-outlet>

@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary-color: $mat-blue-grey;
+$accent-color: $mat-blue;
+$warn-color: $mat-deep-orange;
+
+$iq-theme: mat-light-theme(
+    mat-palette($primary-color, 800),
+    mat-palette($accent-color, 400),
+    mat-palette($warn-color, 600)
+);
+
+@include angular-material-theme($iq-theme);
+
+.mat-table-hover {
+    &.mat-table-selectable tr:hover > td {
+        cursor: pointer;
+    }
+    
+    tr:hover > td {
+        background-color: mat-color($mat-grey, 200);
+    }
+}
